@@ -460,6 +460,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
             }
         }
 
+#if XNAAPI
         /// <summary>
         /// Gets or sets a value indicating whether this body is static.
         /// </summary>
@@ -470,7 +471,9 @@ namespace tainicom.Aether.Physics2D.Dynamics
         {
             get { return _bodyType == BodyType.Static; }
         }
+#endif
 
+#if XNAAPI
         /// <summary>
         /// Gets or sets a value indicating whether this body is kinematic.
         /// </summary>
@@ -481,6 +484,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
         {
             get { return _bodyType == BodyType.Kinematic; }
         }
+#endif
 
         /// <summary>
         /// Gets or sets a value indicating whether this body ignores gravity.
